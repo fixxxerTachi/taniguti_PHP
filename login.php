@@ -4,6 +4,8 @@ require('dbconnect.php');
 session_start();
 $_POST['email']='';
 $_POST['password']='';
+
+/*** cookieがあれば$_POSTに格納して以下の処理を継続させる ****/
 if ($_COOKIE['email'] != '') {
 	$_POST['email'] = $_COOKIE['email'];
 	$_POST['password'] = $_COOKIE['password'];
